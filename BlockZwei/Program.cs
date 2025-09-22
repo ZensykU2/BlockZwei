@@ -62,3 +62,27 @@ Console.ReadLine();
 // a) Typ 1
 // b) Typ 4
 // c) Typ 0
+
+//Aufgabe 3
+//Kompilierfehler bei Zeile: 09 und 15
+//Grund: Bei Zeile 09 zwei solche Operatoren hintereinander sind nicht erlaubt. Bei Zeile 15 darf man nach else keine Bedingung hinzufügen.
+//Korrektur: Bei Zeile 09 das && verwenden und ein erneuter Vergleich. Bei Zeile 15, einfach else verwenden da die anderen abgedeckt sind.
+int anzahl = 1;
+double wert1 = 0, wert2 = 0, wert3 = 0, max = 0;
+Console.Write("Wert: " + Convert.ToString(anzahl++));
+wert1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Wert: " + Convert.ToString(anzahl++));
+wert2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Wert: " + Convert.ToString(anzahl++));
+wert3 = Convert.ToDouble(Console.ReadLine());
+if (wert1 > wert2 && wert1 > wert3)
+    max = wert1;
+else
+{
+    if (wert2 > wert3)
+        max = wert2;
+    else
+        max = wert3;
+}
+Console.WriteLine("Der grösste Wert ist:" + Convert.ToString(max));
+Console.ReadLine();
