@@ -67,7 +67,7 @@ Console.ReadLine();
 //Kompilierfehler bei Zeile: 09 und 15
 //Grund: Bei Zeile 09 zwei solche Operatoren hintereinander sind nicht erlaubt. Bei Zeile 15 darf man nach else keine Bedingung hinzufügen.
 //Korrektur: Bei Zeile 09 das && verwenden und ein erneuter Vergleich. Bei Zeile 15, einfach else verwenden da die anderen abgedeckt sind.
-int anzahl = 1;
+/*int anzahl = 1;
 double wert1 = 0, wert2 = 0, wert3 = 0, max = 0;
 Console.Write("Wert: " + Convert.ToString(anzahl++));
 wert1 = Convert.ToDouble(Console.ReadLine());
@@ -86,3 +86,50 @@ else
 }
 Console.WriteLine("Der grösste Wert ist:" + Convert.ToString(max));
 Console.ReadLine();
+*/
+
+//Aufgabe 4
+/*Console.Write("Geschlecht [m/w]: ");
+string gender = Console.ReadLine().Trim().ToLower();
+
+Console.Write("Gewicht [in Kg]: ");
+if (!double.TryParse(Console.ReadLine(), out double weight))
+{
+    Console.WriteLine("Bitte eine gültige Zahl eingeben.");
+    return;
+}
+
+string weightClass = "";
+
+switch (gender)
+{
+    case "m":
+        if (weight <= 55)
+            weightClass = "Fliegengewicht";
+        else if (weight <= 66)
+            weightClass = "Leichtgewicht";
+        else if (weight <= 84)
+            weightClass = "Mittelgewicht";
+        else
+            weightClass = "Schwergewicht";
+        break;
+
+    case "w":
+        if (weight <= 48)
+            weightClass = "Fliegengewicht";
+        else if (weight <= 55)
+            weightClass = "Leichtgewicht";
+        else if (weight <= 63)
+            weightClass = "Mittelgewicht";
+        else
+            weightClass = "Schwergewicht";
+        break;
+
+    default:
+        Console.WriteLine("Ungültiges Geschlecht eingegeben.");
+        return;
+}
+
+Console.WriteLine($"Gewichtsklasse: {weightClass}");
+*/
+
